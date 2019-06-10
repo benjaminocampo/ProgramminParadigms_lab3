@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ForecastDay from "./ForecastDay";
-import ForecastDayDetail from "./ForecastDayDetail";
+import ForecastDayDetails from "./ForecastDayDetails";
 
 class Forecast extends React.Component {
   constructor(props) {
@@ -74,7 +74,7 @@ class Forecast extends React.Component {
         <div className="card-columns">
           {detail !== [] &&
             detail.map(obj => (
-              <ForecastDayDetail
+              <ForecastDayDetails
                 key={obj.dt}
                 day={this.getNameDay(obj.dt_txt)}
                 time={obj.dt_txt}
